@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #rainy-background {
+    position: relative;
+    background-image: url('images/wallpaperflare.com_wallpaper.jpg');
+    width: 100%;
+    height: 100%;
+    /* background-color: black; Plain black background */
+    background-size: cover;
+  }
+  
+  .raindrop {
+    position: absolute;
+    width: 2px;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.6);
+    bottom: 100%;
+    pointer-events: none;
+    animation: fall linear 0.7s; /* All raindrops fall at the same speed */
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0vh);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 1; /* Maintain full opacity throughout the fall */
+    }
+  }
+  
+  
